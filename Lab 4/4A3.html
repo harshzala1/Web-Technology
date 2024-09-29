@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <script>
+        student = [
+  {
+    "phoneno": "1-978-501-0297",
+    "name": "Willard Farrell",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/797.jpg",
+    "email": "Norma.Feil@hotmail.com",
+    "id": "1"
+  },
+  {
+    "phoneno": "1-858-510-6029 x4558",
+    "name": "Ada Runte",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1036.jpg",
+    "email": "Sydnee_Kerluke@hotmail.com",
+    "id": "2"
+  },
+  {
+    "phoneno": "581-758-3782 x3984",
+    "name": "Leigh Hoeger",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/566.jpg",
+    "email": "Humberto_Lindgren@yahoo.com",
+    "id": "3"
+  },
+  {
+    "phoneno": "(774) 215-6272 x2793",
+    "name": "Blake Sipes",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/253.jpg",
+    "email": "Herminio58@gmail.com",
+    "id": "4"
+  },
+  {
+    "phoneno": "881.919.6506 x39365",
+    "name": "Clarence Effertz",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/204.jpg",
+    "email": "Jaylan_Aufderhar63@gmail.com",
+    "id": "5"
+  }
+]
+document.write("<table border = 1>");
+    for(i=0;i<student.length;i++){
+        document.write("<tr>");
+            document.write("<td>"+student[i].id+"</td>");
+            document.write("<td>"+student[i].name+"</td>");
+            document.write("<td>"+student[i].phoneno+"</td>");
+            document.write("<td>"+student[i].email+"</td>");
+            document.write("<td><img src='" + student[i].avatar + "'/></td>");
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+</body>
+</html>

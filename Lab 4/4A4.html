@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <script>
+       product= [
+  {
+    "price": "631.00",
+    "name": "Jill Stanton",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/499.jpg",
+    "manufacture": "2047-11-17T13:07:12.856Z",
+    "id": "1"
+  },
+  {
+    "price": "15.00",
+    "name": "Melody Veum",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/376.jpg",
+    "manufacture": "2024-03-28T04:35:37.744Z",
+    "id": "2"
+  },
+  {
+    "price": "295.00",
+    "name": "Carmen Fritsch",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1009.jpg",
+    "manufacture": "2078-03-31T03:01:53.320Z",
+    "id": "3"
+  },
+  {
+    "price": "779.00",
+    "name": "Flora Parker",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/649.jpg",
+    "manufacture": "2018-07-24T06:48:26.330Z",
+    "id": "4"
+  },
+  {
+    "price": "537.00",
+    "name": "Muriel Rice",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/609.jpg",
+    "manufacture": "2050-02-03T21:05:25.455Z",
+    "id": "5"
+  },
+  {
+    "price": "588.00",
+    "name": "Robin Orn",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/630.jpg",
+    "manufacture": "2058-07-16T00:50:08.505Z",
+    "id": "6"
+  },
+  {
+    "price": "82.00",
+    "name": "Rickey Koch",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/512.jpg",
+    "manufacture": "1990-11-26T16:09:52.362Z",
+    "id": "7"
+  },
+  {
+    "price": "296.00",
+    "name": "Bryant Gulgowski",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/168.jpg",
+    "manufacture": "2087-01-22T15:56:07.394Z",
+    "id": "8"
+  },
+  {
+    "price": "622.00",
+    "name": "Constance Bradtke",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/847.jpg",
+    "manufacture": "2031-01-09T22:13:09.015Z",
+    "id": "9"
+  },
+  {
+    "price": "593.00",
+    "name": "Inez Kohler",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/198.jpg",
+    "manufacture": "2038-04-26T02:30:44.110Z",
+    "id": "10"
+  }
+]
+document.write("<table border = 1>");
+    for(i=0;i<product.length;i++){
+        document.write("<tr>");
+            document.write("<td>"+product[i].id+"</td>");
+            document.write("<td>"+product[i].name+"</td>");
+            document.write("<td>"+product[i].price+"</td>");
+            document.write("<td>"+product[i].manufacture+"</td>");
+            document.write("<td><img src='" + product[i].avatar + "'/></td>");
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+</body>
+</html>

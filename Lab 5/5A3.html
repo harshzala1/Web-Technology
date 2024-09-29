@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+</head>
+<style>
+    table{
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input[type="button"]{
+        width: 100%;
+        padding: 20px 140px;
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    display{
+        text-align: left;
+    }
+</style>
+<body>
+    <h1 style="color: green; text-align: center;">Scientific Calculator</h1>
+    <form>
+        <table>
+            <tr>
+                <td colspan="6"><input id="display" type="text" colspan="12"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="display.value += '1'"></td>
+                <td><input type="button" value="2" onclick="display.value += '2'"></td>
+                <td><input type="button" value="3" onclick="display.value += '3'"></td>
+                <td><input type="button" value="C" onclick="display.value = ''"></td>
+                <td><input type="button" value="⌫" onclick="backspace()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="display.value += '4'"></td>
+                <td><input type="button" value="5" onclick="display.value += '5'"></td>
+                <td><input type="button" value="6" onclick="display.value += '6'"></td>
+                <td><input type="button" value="-" onclick="display.value += '-'"></td>
+                <td><input type="button" value="%" onclick="display.value += '%'"></td>
+                <td><input type="button" value="cos(" onclick="display.value += 'cos('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="display.value += '7'"></td>
+                <td><input type="button" value="8" onclick="display.value += '8'"></td>
+                <td><input type="button" value="9" onclick="display.value += '9'"></td>
+                <td><input type="button" value="*" onclick="display.value += '*'"></td>
+                <td><input type="button" value="!" onclick="display.value += '!'"></td>
+                <td><input type="button" value="sin(" onclick="display.value += 'sin('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="display.value += '.'"></td>
+                <td><input type="button" value="0" onclick="display.value += '0'"></td>
+                <td><input type="button" value="," onclick="display.value += ','"></td>
+                <td><input type="button" value="+" onclick="display.value += '+'"></td>
+                <td><input type="button" value="/" onclick="display.value += '/'"></td>
+                <td><input type="button" value="tan(" onclick="display.value += 'tan('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="E" onclick="display.value += 'e()'"></td>
+                <td><input type="button" value="π" onclick="display.value += 'pi()'"></td>
+                <td><input type="button" value="^" onclick="display.value += 'power()'"></td>
+                <td><input type="button" value="(" onclick="display.value += '('"></td>
+                <td><input type="button" value=")" onclick="display.value += ')'"></td>
+                <td><input type="button" value="log(" onclick="display.value += 'base10Log()'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="√" onclick="display.value += 'squareRoot()'"></td>
+                <td><input type="button" value="ln2" onclick="display.value += Math.LN2"></td>
+                <td><input type="button" value="log10(" onclick="display.value += 'base10Log()'"></td>
+                <td><input type="button" value="l2e" onclick="display.value += Math.LOG2E"></td>
+                <td><input type="button" value="l10e" onclick="display.value += Math.LOG10E"></td>
+                <td><input type="button" value="exp(" onclick="display.value += 'exp('"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function backspace(){
+        let display = document.getElementById("display");
+        display.value = display.value.slice(0, -1);
+    }
+
+    function calculate(){
+        let display = document.getElementById("display");
+        let expression = display.value;
+        result;
+        try{
+            expression = expression.replace(/sin\(/g,'sin('+Math.PI/180+'*');
+            expression = expression.replace(/cos\(/g,'cos('+Math.PI/180+'*');
+            expression = expression.replace(/tan\(/g,'tan('+Math.PI/180+'*');
+            result = math.evaluate(expression);
+            display.value = result;
+        }
+        catch(error){
+            display.value = "Error"
+        } 
+    }
+
+    function squareRoot(){
+        let display = documnet.getElementById("display")
+        display.value += "sqrt(";
+    }
+    function base10Log(){
+        let display = documnet.getElementById("display")
+        display.value += "log(";
+    }function pi(){
+        let display = documnet.getElementById("display")
+        display.value += "π";
+    }function e(){
+        let display = documnet.getElementById("display")
+        display.value += "e";
+    }
+    function power(){
+        let display = documnet.getElementById("display")
+        display.value += "^(";
+    }
+</script>
+</html>

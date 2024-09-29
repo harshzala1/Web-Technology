@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+</head>
+<body>
+    <script>
+        a = parseInt(prompt("Enter starting range:"))
+        b = parseInt(prompt("Enter ending range:"))
+        for(i=a;i<=b;i++){
+            count =0
+            for(j=2;j<(i/2);j++){
+                if(j%i==0){
+                count++
+                break;
+            }   
+            }
+            if(count==0){
+                document.write(i)
+                i++
+            }
+            // else{
+            //     document.write("Non prime")
+            // }
+        }
+    </script>
+</body>
+</html>

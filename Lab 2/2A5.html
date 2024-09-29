@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-digit number</title>
+</head>
+<body>
+    <script>
+        function multiplyDigits() {
+            const inputNumber = prompt("Enter a 2-digit number:");
+            const firstDigit = parseInt(inputNumber.charAt(0));
+            alert("the first digit is:"+firstDigit)
+            const secondDigit = parseInt(inputNumber.charAt(1));
+            alert("the second digit is:"+secondDigit)
+            const result = firstDigit ** secondDigit; // Using the exponentiation operator
+
+            alert(`Result: ${result}`);
+        }
+
+        multiplyDigits();
+
+        
+    </script>
+</body>
+</html>

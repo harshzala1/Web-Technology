@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+</head>
+<body>
+    <div>
+        <input type="button" id="btn" onclick="change()" style="height: 150px; width: 100px;"> Click here to change colour 
+        <!-- <button onclick="change()" id="button"></button> -->
+    </div>
+    <script>
+
+        function change(){
+            var r = Math.floor(Math.random()*256);
+            var g = Math.floor(Math.random()*256);
+            var b = Math.floor(Math.random()*256);
+            var a = Math.floor(Math.random()*256);
+
+            // document.getElementById("btn").style.backgroundColor = "rgba("+r+","+g+","+b+","+a+")";
+            document.body.style.backgroundColor =  "rgba("+r+","+g+","+b+","+a+")";
+            
+        }
+        // setInterval(change,1000); whenever you do this just remove onclick from div
+        </script>
+</body>
+</html>

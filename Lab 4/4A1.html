@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculties</title>
+</head>
+<body>
+    <script>
+        faculty = [
+  {
+    "work_exp": 72454,
+    "name": "Phil Jakubowski",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/21.jpg",
+    "id": "1"
+  },
+  {
+    "work_exp": 94796,
+    "name": "Warren Herzog",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/919.jpg",
+    "id": "2"
+  },
+  {
+    "work_exp": 67229,
+    "name": "Owen Bogisich",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/626.jpg",
+    "id": "3"
+  },
+  {
+    "work_exp": 39641,
+    "name": "Laura Mitchell",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/918.jpg",
+    "id": "4"
+  },
+  {
+    "work_exp": 56576,
+    "name": "Rodolfo Morissette",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/127.jpg",
+    "id": "5"
+  },
+  {
+    "work_exp": 20068,
+    "name": "Leticia Koch",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/250.jpg",
+    "id": "6"
+  },
+  {
+    "work_exp": 5625,
+    "name": "Ms. Mabel Johnston",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/511.jpg",
+    "id": "7"
+  },
+  {
+    "work_exp": 52093,
+    "name": "Eileen Nolan",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/418.jpg",
+    "id": "8"
+  },
+  {
+    "work_exp": 48449,
+    "name": "Ruth Becker",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/144.jpg",
+    "id": "9"
+  },
+  {
+    "work_exp": 39348,
+    "name": "Francisco Steuber",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/657.jpg",
+    "id": "10"
+  }
+]
+        document.write("<table border = 1>");
+    for(i=0;i<faculty.length;i++){
+        document.write("<tr>");
+            document.write("<td>"+faculty[i].id+"</td>");
+            document.write("<td>"+faculty[i].name+"</td>");
+            document.write("<td>"+faculty[i].work_exp+"</td>");
+            document.write("<td><img src='" + faculty[i].avatar + "'/></td>");
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    // faculty1 = [
+    //     name="arjun_bala",
+    //     exp= "11 years",
+    // ]
+    // faculty2 = [
+    //     name="krunal_vyas",
+    //     exp="8 years",
+    // ]
+    // faculty = [faculty1, faculty2];
+    </script>
+</body>
+</html>

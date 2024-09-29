@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence</title>
+</head>
+<body>
+    <script>
+        str = prompt("Enter the string")
+        str = str.toLowerCase()
+        s = prompt("Enter the word to search ")
+        s = s.toLowerCase()
+        words = str.split(" ")
+        for(i=0;i<words.length;i++){
+        if(s==words[i]){
+            document.write(i)
+        }
+        
+        }
+</script>
+</body>
+</html>

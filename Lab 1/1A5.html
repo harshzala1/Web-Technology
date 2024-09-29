@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrom</title>
+</head>
+<body>
+    <script>
+        n=parseInt(prompt("Enter n:"))
+        temp=n
+        remainder=0
+        reverse=0
+        while(n!=0){
+            remainder=n%10;
+            reverse=reverse*10+remainder
+            n=Math.floor(n/10)
+        }
+        if(reverse==temp){
+            document.write("Palindrom")
+        }
+        else{
+            document.write("Non Palindrom")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-6"><h1>FORM REGISTRATION</h1></div>
+    <table border="1">
+        <tr>
+            <td>Username</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="text" id="txtName" class="col-12">
+                <span id="errMsg"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="password" id="txtpass" class="col-12">
+                <span id="errMsgPass"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Comfirm password</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="password" id="conformpass" class="col-12">
+                <span id="errMsgConPass"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Age</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="date" id="dob" class="col-12">
+                <span id="errMsgAge"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enrollment</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="number" id="enroll" class="col-12">
+                <span id="errMsgRoll"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td class="col-6"></td>
+            <td>
+                <input type="email" id="email" class="col-12">
+                <span id="errMsgMail"></span>
+            </td>
+        </tr>
+
+    </table>
+
+    <button onclick="testData()">Submit</button>
+</div>
+    <script>
+        function testData() {
+            name = document.getElementById('txtName').value;
+
+            pattern = /[a-zA-Z]{8}/;
+            
+            regexp = new RegExp(pattern);
+
+            if (!regexp.test(name)) {
+                document.getElementById("errMsg").innerHTML = "invalid user name"
+            }
+            else {
+                document.getElementById('errMsg').innerHTML = "valid user name"
+            }
+
+
+            //password
+            pword = document.getElementById('txtpass').value;
+
+            pattern = "/[0-9]{1,}[!@#$%^&*]{1,}[a-zA-Z]{8,12}/";
+
+            regexp = new RegExp(pword);
+
+            if (regexp.test(name)) {
+                document.getElementById('errMsgPass').innerHTML = "Valid password"
+            }
+            else {
+                document.getElementById('errMsgPass').innerHTML = "Invalid password"
+            }
+
+            //confirm password
+            cpword = document.getElementById('conformpass').value;
+
+            pattern = "/[0-9]{1,}[!@#$%^&*]{1,}[a-zA-Z]{8,12}/";
+
+            regexp = new RegExp(pattern);
+
+            if (regexp.test(cpword)) {
+                document.getElementById('errMsgConPass').innerHTML = "Valid confirm password"
+            }
+            else {
+                document.getElementById('errMsgConPass').innerHTML = "Invalid confirm password"
+            }
+
+
+            // Date of birth
+            let dob = document.getElementById('dob').value;
+            dob = new Date(dob);
+            let today = new Date()
+            let age = today.getFullYear() - bod.getFullYear()
+            let monthdiff = today.getMonth() - bod.getMonth()
+            if (monthdiff < 0 || (monthdiff === 0 && today.getDate() < bod.getDate())) {
+                age--;
+            }
+
+
+            //enrollment number
+            enroll = document.getElementById('enroll').value;
+
+            pattern = /[0-9]{,11}/;
+
+            regexp = new RegExp(pattern);
+
+            if (regexp.test(enroll)) {
+                document.getElementById('errMsgRoll').innerHTML = "Valid enrollment number"
+            }
+            else {
+                document.getElementById('errMsgRoll').innerHTML = "Invalid enrollment number"
+            }
+
+
+            //email
+            ename = document.getElementById('email').value;
+
+            pattern = /[a-zA-Z0-9]{12,}@[a-z]{5,}.com/
+
+
+            regexp = new RegExp(pattern);
+
+            if (regexp.test(ename)) {
+                document.getElementById('errMsgMail').innerHTML = "Valid email"
+            }
+            else {
+                document.getElementById('errMsgMail').innerHTML = "Invalid email"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

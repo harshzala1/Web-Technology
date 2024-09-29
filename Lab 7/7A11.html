@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Selection</title>
+<style>
+    /* Optional CSS for better styling */
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <h2>Select Roll Numbers</h2>
+    <form id="rollNumbersForm">
+        <label><input type="checkbox" value="101"> Roll Number 101</label>
+        <label><input type="checkbox" value="102"> Roll Number 102</label>
+        <label><input type="checkbox" value="103"> Roll Number 103</label>
+        <label><input type="checkbox" value="104"> Roll Number 104</label>
+        <label><input type="checkbox" value="105"> Roll Number 105</label>
+        <!-- Add more checkboxes as needed -->
+    </form>
+    <br>
+    <p>Selected Roll Numbers: <span id="selectedRollNumbers"></span></p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const selectedRollNumbersSpan = document.getElementById('selectedRollNumbers');
+
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            let selectedRollNumbers = [];
+
+            checkboxes.forEach(function(cb) {
+                if (cb.checked) {
+                    selectedRollNumbers.push(cb.value);
+                }
+            });
+
+            selectedRollNumbersSpan.textContent = selectedRollNumbers.join(', ');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

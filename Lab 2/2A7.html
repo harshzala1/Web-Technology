@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Position Finder</title>
+</head>
+<body>
+    <script>
+        function findVowelPositions() {
+            const inputWord = prompt("Enter a word:");
+            const lowerCaseWord = inputWord.toLowerCase();
+
+            const firstAIndex = lowerCaseWord.indexOf('a');
+            const lastAIndex = lowerCaseWord.lastIndexOf('a');
+
+            if (firstAIndex === -1 || lastAIndex === -1) {
+                alert("No 'a' found in the word.");
+            } else {
+                const substringBetweenA = inputWord.substring(firstAIndex + 1, lastAIndex);
+                alert(`First occurrence of 'a': ${firstAIndex + 1}\nLast occurrence of 'a': ${lastAIndex + 1}\nSubstring between them: ${substringBetweenA}`);
+            }
+        }
+
+        findVowelPositions();
+    </script>
+</body>
+</html>

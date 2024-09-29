@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image resizer</title>
+</head>
+<body>
+    <button id="btn" >Increase</button>
+    <button id="btn2">Decrease</button>
+    <img id="image" src="Marvel 2.jpg" width="50px"/>
+    <script>
+        width=50;
+        document.getElementById('btn').addEventListener("click",()=>{
+            console.log("hello");
+            width+=50
+            document.getElementById('image').style.width=width+"px"
+            console.log(document.getElementById('image').width);
+            console.log(width);
+        })
+        document.getElementById('btn2').addEventListener("click",()=>{
+            console.log("hello");
+            width-=50
+            document.getElementById('image').style.width=width+"px"
+            console.log(document.getElementById('image').width);
+            console.log(width);
+        })
+    //     function increase(){
+        
+    // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <script>
+    document.addEventListener('mousedown', function(event) {
+    // event.button === 0 -> left button clicked
+    // event.button === 2 -> right button clicked
+
+    if (event.button === 0) {
+        alert('Left Clicked');
+    }else if(event.button === 1){
+        alert('Scroll');
+    } 
+    else if (event.button === 2) {
+        alert('Right Clicked');
+    }
+});
+        
+</script>
+</body>
+</html>

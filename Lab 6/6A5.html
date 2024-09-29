@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Type</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="btn">👁️</button>
+    <div id="a">hello</div>
+    <div id="b">hello</div>
+    <div id="c">hello</div>
+    <script>
+        document.getElementById('a').addEventListener('click',()=>{document.getElementById('a').style.fontFamily="Arial"})
+        document.getElementById('b').addEventListener('click',()=>{document.getElementById('b').style.fontSize="42px"})
+        document.getElementById('c').addEventListener('click',()=>{document.getElementById('c').style.color="blue"})
+        let btn = document.getElementById("btn");
+        let input = document.getElementById("input");
+        let temp = true;
+
+        btn.addEventListener('click', ()=>{
+        
+            if(temp){
+                input.type = "password"
+            }
+            else{
+                input.type = "text";
+            }
+                temp = !temp;
+        
+        })
+    </script>
+</body>
+</html>

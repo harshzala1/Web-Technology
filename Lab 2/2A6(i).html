@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words Converter</title>
+    <script>
+        function convertNumberToWords() {
+            const inputNumber = parseInt(document.getElementById('numberInput').value);
+
+            if (isNaN(inputNumber)) {
+                document.getElementById('result').value = 'Not a number';
+            } else if (inputNumber < 0 || inputNumber > 999) {
+                document.getElementById('result').value = 'Out of range';
+            } else {
+                const ones = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+                const tens = ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+                const teens = ['Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+
+                let result = '';
+
+                if (inputNumber >= 100) {
+                    result += ones[Math.floor(inputNumber / 100)] + ' Hundred ';
+                    inputNumber %= 100;
+                }
+
+                if (inputNumber >= 20) {
+                    result += tens[Math.floor(inputNumber / 10)] + ' ';
+                    inputNumber %= 10;
+                } else if (inputNumber >= 11 && inputNumber <= 19) {
+                    result += teens[inputNumber - 11] + ' ';
+                    inputNumber = 0;
+                }
+
+                if (inputNumber > 0) {
+                    result += ones[inputNumber] + ' ';
+                }
+
+                document.getElementById('result').value = result.trim();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Number to Words Converter</h1>
+    <label for="numberInput">Enter a number (0-999):</label>
+    <input type="number" id="numberInput" min="0" max="999">
+    <button onclick="convertNumberToWords()">Convert</button>
+    <input type="text" id="result" readonly>
+</body>
+</html>

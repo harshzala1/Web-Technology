@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class ="btn-group-vertical" role="group" aria-label="Vertical button group">
+    <table border="3">
+        <tr>
+            <td colspan="5"><input type="text" name="" id="result"></td>
+        </tr>
+        <tr>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('0')">0</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('1')">1</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('2')">2</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('+')">+</button></td>
+
+        </tr>
+        <tr>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('3')">3</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('4')">4</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('5')">5</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('-')">-</button></td>
+
+        </tr>
+        <tr>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('6')">6</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('7')">7</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('8')">8</button></td>
+            <td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('*')">*</button></td>
+
+        </tr>
+        <tr>
+            <td align="center"><button class="btn btn-light btn-outline-danger" waves-effect onclick="Clear()">C</button></td>
+			<td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('9')">9</button></td>
+			<td align="center"><button class="btn btn-light btn-outline-primary" waves-effect onclick="cal()">=</button></td>
+			<td align="center"><button class="btn btn-light btn-outline-dark" waves-effect onclick="disp('/')">/</button></td>
+        </tr>
+    </table>
+    </div>
+</div>
+    <script>
+        function disp(v){
+            document.getElementById('result').value += v;
+        }
+        function Clear(){
+            document.getElementById('result').value = ' '
+        }
+        function cal(){
+            ans = document.getElementById('result').value
+            x=eval(ans);
+            document.getElementById('result').value = x;
+        }
+    </script>
+</body>
+</html>

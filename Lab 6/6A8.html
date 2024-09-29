@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing mouse events</title>
+</head>
+<body>
+    <div id="a" style="font-size: 42px;">Heading</div><br>
+    <button type="button" onclick="showDateTime()">Show date and time</button>
+    <p id="date_time_display"></p>
+    <button id="red" onclick="red()"> Turn Background to Red</button>
+    <button id="green" onclick="green()"> Turn Background to green</button>
+
+</body>
+<script>
+    document.getElementById('a').addEventListener('mouseover',()=>{
+            document.getElementById('a').style.color="yellow"
+        })
+    document.getElementById('a').addEventListener('mouseout',()=>{
+        document.getElementById('a').style.color="black"
+    })
+
+    function showDateTime(){
+        const currentDate = new Date(); 
+        document.getElementById('date_time_display').innerHTML = currentDate.toString();
+    }
+    
+    function red(){
+        document.body.style.backgroundColor="red"
+    }
+    function green(){
+        document.body.style.backgroundColor="green"
+    }
+</script>
+</html>
